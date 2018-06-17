@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html lang='en'>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Freecycle Network is a grassroots and entirely nonprofit movement of people who are giving (and getting) stuff for free in their own towns. It's all about reuse and keeping good stuff out of landfills.">
+    <title>The Freecycle Network</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-ipad-icon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-retina.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/apple-ipad-icon-retina.png" />
+    <link rel='stylesheet' type='text/css' href='freecycle.css' />
+
+    <script>
+      let aboutSub = false;
+      let moreSub = false;
+      function inAbout(){
+        showMenu("dyn_about");
+        aboutSub = true;
+      }
+      function checkSearch(){
+        let s1 = document.getElementById("keywordItem").value
+        let s2 = document.getElementById("location").value
+        console.log(s1.value)
+        console.log(s2.value);
+        if(s1.value==s2.value){alert("Hey there, friendly reminder to type a search query in one of the boxes. Okay, bye now.");}
+        // alert(s1.value,s2.value);
+      }
+      function outAbout(){
+        aboutSub = false;
+      }
+  
+      function showMenu(menu){
+        let Emenu = document.getElementById(menu);
+        if(menu=="dyn_about"){
+          console.log("here");
+          document.getElementById("mmenu_about").style.backgroundColor = "#253";
+          Emenu.style = "display:block";
+        }
+        
+      }
+
+      function hideAllMenus(){
+        document.getElementById("mmenu_about").style.backgroundColor = "#32B116";
+        document.getElementById("dyn_about").style="display:none;";
+        document.getElementsByClassName('menu_item').style="display:none";
+
+      }
+
+    </script>
+  </head>
+
+<body>  
+  <nav id="skip_nav_menu"><a href='#content'>Skip navigation menu</a><hr></nav>
+<header id="main_logo">
+   
+<nav id="main_menu"> 
+    <a class="menu_header" href="index.html" id="link" title="return to homepage" >
+      <img src = "images/favicon.png" id="menu_logo" alt="logo-icon"/>
+    </a>
+  <a href='index.html'  class='menu_header' id="item1" alt="find your group" title="Browse Groups">Find Your Group</a> 
+  <div onmouseover="inAbout()" onmouseout="hideAllMenus()" class="menu_header">
+    <a href='#/about/' id='mmenu_about' onmouseout="hideAllMenus()" class='menu_header' title="About Freecycle">About</a>
+    <div id='dyn_about' style="display:none;height:300px;border:1;" onmouseout="hideAllMenus()">
+        <div class ="itemList" onmouseover="showMenu('dyn_about')" >
+          <a href="#" class='menu_item' title="Newswire">Newswire</a>
+          <a href="#" class='menu_item' title="History">History</a>
+          <a href="#" class='menu_item' title="Promo Video ">Promo Video</a>
+          <a href="#" class='menu_item' title="Mission Statement">Mission Statement</a>
+          <a href="#" class='menu_item' title="Press Room">Press Room</a>
+          <a href="#" class='menu_item' title="Volunteering">Volunteering</a>
+          <a href="#" class='menu_item' title="Privacy">Privacy</a>
+          <a href="#" class='menu_item' title="Terms of Service">Terms of Service</a>
+          <a href="#" class='menu_item' title="Disclaimer">Disclaimer</a>
+        </div>
+     </div>
+   </div>
+  <a href='#'  class='menu_header menu_header_2' title="Donate">Donate</a>
+  <a href='#'  class='menu_header menu_header_2' title="Store">Store</a> 
+  <a href='#' id='mmenu_faq'  class='menu_header ' title="FAQ">FAQ</a>
+
+  <a href="my.freestyle.html"  id="login_btn" class='menu_header ' title="Log in/Sign up">Log in/Sign up</a> 
+ 
+</nav>
+
+<div id="large_freecycle" >
+    <img id="logo" src="images/freecycle_logo.jpg" alt="logo of The Freecycle Network" title="The Freecycle Network" height="100" width="213" />
+    <p id='tagline'>changing the world<br />one gift at a time&trade;</p>
+  </div>
+</header> 
+
+<div id='dyn_myf' style="display:none">
+  <a href='http://my.freecycle.org/home/info' class='menu_item' title="My Info">My Info</a>
+  <a href='http://my.freecycle.org/home/groups' class='menu_item' title="My Groups">My Groups</a>
+  <a href='http://my.freecycle.org/home/posts' class='menu_item' title="My Posts">My Posts</a>
+</div>
+
+<div id='dyn_faq' style="display:none">
+ <a href="http://wiki.freecycle.org/MemberFAQ" class="menu_item" title="Member FAQ">Member FAQ</a>
+ <a href="http://wiki.freecycle.org/Moderator_Manual:Main_Page" class="menu_item" title="Moderator Manual">Moderator Manual</a>
+</div> 
+</section>
+ <section  id="content"> 
+   <div class="search_wrap">
+
+  <div id='group_search_box' class=' search_box vgap'>
+    <h2 id="findgroup" class="greenTab boxCenter search_box_tab"> Find an item near you </h2>
+    <form method="post" action="#search" class='rounded '>
+     <input type="text"  id='keywordItem' placeholder="Search Items" max="24" />
+     <input type="text" id='location' placeholder="Search Places" max="24" />
+     <input type="submit" id="go" onclick="checkSearch()" class='rounded defaultButton' value="go" />  
+    </form> 
+  </div>    
+</div> 
+<section class='index_page'>
+    <article class="rounded orangeBox boxCenter textJustify " > Welcome! The Freecycle Network&trade; is made up of 5,319 groups with 9,234,669 members around the world, and next door to you. It's a grassroots and entirely nonprofit movement of people who are giving (and getting) stuff for free in their own towns and neighborhoods. It's all about reuse and keeping good stuff out of landfills.Each local group is moderated by local volunteers (them's good people). Membership is free. To sign up, find your community by entering it into the search box above or by clicking on 'Browse Groups' above the search box. Have fun! </article>  
+</section>   
+</div>
+
+</div>
+ 
+</div>
+
+
+   </section>
+
+<footer id="main_footer">
+   
+  <div class="social_container">
+    <img src='images/facebook.jpg' class="social" style="padding:4px 8px;display:inline;vertical-align:middle;position:sticky;"><span class="underlinable">Like us on Facebook</span><br>
+    <img src='images/twitter.png'  class="social" style="padding:4px 8px;display:inline;vertical-align:middle;position:sticky;"><span class="underlinable">Follow us on twitter</span><br>
+  </div>
+ 
+  <div style="float:right; margin-right:20px;margin-top:12px;">
+      <span style="margin-left:10px" >Sponsored By</span>
+    <div class="rounded lightGreenBox textCenter" style="margin-top:5px;padding:2px">
+          <a href='https://www.usstoragecenters.com/' >
+        <img src="https://www.usstoragecenters.com/media/1007/logo.svg" class="bubble_wrap" alt="US Storage Centers" title="US Storage Centers" style="max-width:120px"></a>
+    </div>  
+  </div>
+  <div style="text-align:center;margin-top:20px">
+      <span class="copyright">
+      Copyright &copy;2018 The Freecycle Network. </br>All rights reserved. Freecycle and the Freecycle logo are trademarks of The Freecycle Network in various countries. 
+      </span >
+    </div>
+</footer>
+
+</body>
+</html>
+   

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0025)https://my.freecycle.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>My Freecycle Network</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <!-- Make sure this is inserted before your GPT tag -->
+  <script> 
+
+    
+
+    let aboutSub = false;
+    let moreSub = false;
+    function inAbout(){
+      showMenu("dyn_about");
+      aboutSub = true;
+    }
+    function inMore(){
+      showMenu("dyn_more");
+      moreSub= true;
+    }
+    function outAbout(){
+      aboutSub = false;
+    }
+    function outMore(){
+      moreSub = false;
+    }
+    function showMenu(menu){
+      document.getElementById(menu).style="display:block";
+           }
+
+    function hideAllMenus(){
+      document.getElementById("dyn_about").style="display:none";
+    }
+    function hideMenu(menu){
+      var nav =  document.getElementById(menu);
+      if(aboutSub==true){
+        nav.style = "display:none";
+      }
+    }
+
+
+  </script>
+  <!-- Prebid Config Section END -->
+  
+  
+
+  
+
+  <nav id="skip_nav_menu"><a href='#content'>Skip navigation menu</a><hr></nav>
+<header id="main_logo">
+   
+    <nav id="main_menu"> 
+        <a class="menu_header" href="index.html" id="link" title="return to homepage" >
+          <img src = "images/favicon.png" id="menu_logo" alt="logo-icon"/>
+        </a>
+      <a href='index.html'  class='menu_header' id="item1" alt="find your group" title="Browse Groups">Find Your Group</a> 
+      <div onmouseover="inAbout()" onmouseout="hideAllMenus()" class="menu_header">
+        <a href='#/about/' id='mmenu_about' onmouseout="hideAllMenus()" class='menu_header' title="About Freecycle">About</a>
+        <div id='dyn_about' style="display:none;height:300px;border:1;" onmouseout="hideAllMenus()">
+            <div class ="itemList" onmouseover="showMenu('dyn_about')" >
+              <a href="#" class='menu_item' title="Newswire">Newswire</a>
+              <a href="#" class='menu_item' title="History">History</a>
+              <a href="#" class='menu_item' title="Promo Video ">Promo Video</a>
+              <a href="#" class='menu_item' title="Mission Statement">Mission Statement</a>
+              <a href="#" class='menu_item' title="Press Room">Press Room</a>
+              <a href="#" class='menu_item' title="Volunteering">Volunteering</a>
+              <a href="#" class='menu_item' title="Privacy">Privacy</a>
+              <a href="#" class='menu_item' title="Terms of Service">Terms of Service</a>
+              <a href="#" class='menu_item' title="Disclaimer">Disclaimer</a>
+            </div>
+         </div>
+       </div>
+      <a href='#'  class='menu_header menu_header_2' title="Donate">Donate</a>
+      <a href='#'  class='menu_header menu_header_2' title="Store">Store</a> 
+      <a href='#' id='mmenu_faq'  class='menu_header ' title="FAQ">FAQ</a>
+  <a href="my.freestyle.html"  id="login_btn" class='menu_header ' title="Log in/Sign up">Log in/Sign up</a> 
+ 
+</nav>
+
+
+</header> 
+
+
+  <section>
+<div id="boxes">
+
+<div class="titled_box" id="returning">
+  <h1>Returning Users</h1>  <form method="post" class="cols_2" action="https://my.freecycle.org/login" id="loginform" accept-charset="utf-8"><fieldset>
+    <label for="username"></label>
+    <input type="text" style="font-size:14px;height:20px;width:75%;" name="username" id="username" placeholder="Username or Email"><br>
+<br></br>
+    <label for="pass"></label>
+    <input type="password" style="font-size:14px;height:20px;width:75%;" name="pass" id="pass" placeholder="Password"><br>
+
+   <div id="create"> <input type="submit" class="loginbutton" value="Login" class="button vgap ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+  </div>
+   <div id="forgot">
+   <a href="https://www.freecycle.org/login/forgotten_password" style="font-size:12px;">Forgot Password?</a>
+  	</div>
+  	
+  	<div id="fb_login"><img src="images/facebook.png" width="200px"></img></div>
+  </fieldset></form>
+  
+	
+
+<br>
+</div>
+
+<div class="titled_box" id="new">
+  <h1>New Users</h1>
+  <p></p>
+    <label for="username"></label>
+    <input type="text" style="font-size:14px;height:20px;width:75%;" name="username" id="username" placeholder="Email Address"><br>
+<br></br>
+    <label for="pass"></label>
+    <input type="password" style="font-size:14px;height:20px;width:75%;" name="pass" id="pass" placeholder="Password"><br>
+    <br></br><input type="password" style="font-size:14px;height:20px;width:75%;" name="pass" id="pass" placeholder="Retype Password"><br>
+		<div id="agree">
+		<label class="check" style="color: #213121;">
+  			<input type="checkbox" > I agree to the terms and conditions.
+  			<span class="checkmark"></span>
+		</label>
+		</div>
+		
+		<br></br>
+    <div id="create"><input type="submit"  class="loginbutton" value="Create Account" class="button vgap ui-button ui-widget ui-state-default ui-corner-all" role="button" aria-disabled="false">
+	</div>
+	
+</div>
+</div>
+</section>
+
+ 
+
+<footer id="main_footer">
+    <div class="social_container">
+      <img src='images/facebook.jpg' class="social" style="padding:4px 8px;display:inline;vertical-align:middle;position:sticky;"><span class="underlinable">Like us on Facebook</span><br>
+      <img src='images/twitter.png'  class="social" style="padding:4px 8px;display:inline;vertical-align:middle;position:sticky;"><span class="underlinable">Follow us on twitter</span><br>
+    </div>
+    
+    <div style="float:right; margin-right:20px;margin-top:12px;">
+        <span style="margin-left:10px" >Sponsored By</span>
+      <div class="rounded lightGreenBox textCenter" style="margin-top:5px;">
+            <a href='https://www.usstoragecenters.com/' >
+          <img src="https://www.usstoragecenters.com/media/1007/logo.svg" alt="US Storage Centers" title="US Storage Centers" style="max-width:120px"></a>
+      </div>  
+    </div>
+    <div style="text-align:center;margin-top:20px">
+        <span style="margin-top:20px;line-height: 2em;">
+        Copyright &copy;2018 The Freecycle Network. </br>All rights reserved. Freecycle and the Freecycle logo are trademarks of The Freecycle Network in various countries. 
+        </span >
+      </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* 
+    $fcgreen: #3B3;
+    $fcdkgreen: #253;
+*/
+
+body {
+  font-family: "Lucida Grande", Verdana, Lucida, serif;
+  font-size: 12px ;
+}
+
+#logo {
+  width: 50%;
+  margin: auto;
+}
+
+#tagline {
+  width: 300px;
+  margin: 10px auto;
+  padding-left: 60px;
+}
+
+.product {
+  float: left;
+  width: 400px;
+  border: 1px solid #253;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  height: 500px;
+}
+.product img {
+  width: 300px;
+}
+
+.product#greenbag img {
+  width: 250px;
+}
+
+#shipping, #copyright {
+  clear: both;
+  border-radius: 10px;
+  background-color: #3B3;
+  padding: 10px;
+}
+
+#shipping {
+  padding-left: 40px;
+}
+#copyright {
+  text-align: center;
+}
+a {border: 0px}
+
+/*menu test*/
+#main_menu, #barremenu, button, .button, .defaultButton, .orangeButton, .greenTab, .lightGreenShadow, .orangeShadow, .rounded {
+    position: relative!;
+}
+
+#barremenu, #main_menu {
+    font-size: 20px;
+    background: #3b3;
+    border: 2px solid #253;
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
+    width: 90%;
+    min-width: 1000px;
+    margin: 1em auto 0 auto;
+    border-radius: 8px;
+}
+
+.menu_header {
+    margin: 0;
+    padding: 0 .5em;
+    text-align: center;
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: #fff;
+    font-family: Verdana;
+    
+}
+.space{
+  right:150px;
+}
